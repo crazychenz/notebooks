@@ -55,7 +55,7 @@ Jenkins on windows was a pain (and yet I bet it was easier than dealing with Lin
 
 To setup and automated build with Godot in Windows, you have to have a desktop. Luckily, Jenkins allows its slaves to be run within a GUI environment. This is different from its master server which runs as a Windows service as SYSTEM (with no apparent access to the desktop environment.) The point here is that I setup a *LocalNode* slave that is run as me, the user, when I log onto the system. The fact that I have to be logged on is a known issue, but one I am willing to deal with because I don't plan to run nightly builds anyway. The way we startup the LocalNode is with a Windows Task Scheduler task.
 
-[[2020-04-10-tasksched.png]]
+![2020-04-10-tasksched.png](2020-04-10-tasksched.png)
 
 The one thing that is not shown here is the fact that I modified the run trigger so that it is delayed by 1 minute to give the Jenkins service time to settle if I am logging in at bootup.
 
